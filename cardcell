@@ -1,0 +1,14 @@
+
+TouchableGrid
+
+TouchableCell: 可触控的单元，
+  有两种，一种是，里面有一张牌：有4个resultCell, 1个wasteCell, 最多49个tableauCell
+  另一种是里面有一摞牌: 有1个cardPile, 里面最多有24张牌
+  touchableCell里，要存有一个左上角，右下角两个点的位置
+
+PointerTracker: 根据手指的位置，判断当前点击的TouchableCell，
+TouchDown的时候，根据鼠标位置，判断当前那些cell要被移动，TouchMove的时候，执行这些cell
+里面的牌的拖拽，TouchEnd的时候，判断是click还是release, 然后在click 和 release的时候，瞬间把cell里的数据更新，并发指令给gameArea
+
+
+GameArea：里面有所有牌的node, 控制牌做动画，移动，翻转。 当PointerTracker发来指令时，移动牌到目标位置，在移动过程中，收到了新指令，把旧的停掉，移动到新目标位置
