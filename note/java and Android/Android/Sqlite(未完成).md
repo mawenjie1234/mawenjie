@@ -89,8 +89,11 @@ db.insert insertWithOnConflict() 的第一步会创建一个sql的String，并�
 那么，插入操作又是使用了哪些类，哪个关键的哥们调用了Native的方法。[这篇文章写的更好](https://wqyjh.github.io/2016/12/22/Android-SQLite-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)
 
 
+statement.executeInsert()后调用 getThreadSession()， 确保一个线程只有一个 SqlSession。
+SqlSession 中使用 SQLiteConnection 调用native的方法进行插入。所以正在执行native的哥们是SQLiteConnection
 
-
+问题： 为啥要确保一个线程只有一个session。
+确保一个线程只有一个数据库的链接，如果一个线程尝试有很多个链接，那么就有可能会发生死锁。
 
 
 
