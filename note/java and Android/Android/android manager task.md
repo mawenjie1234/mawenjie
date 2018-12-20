@@ -19,5 +19,16 @@
   所以singleTop的逻辑就是，查看当前要出的Activity是否在栈顶，如果是， 就调用栈顶Activity 的onNewIntent(), 如果不是栈顶，那么就新创建一个实例。
 * singleTask
 
+  只会有一个实例。 如果有一个实例已经在当前task中，那么在这个实例上面的Activity都会被destroyed，这个实例并且会调用onNewIntene()。
+
+注意 ： 文档中写说 如果使用singleTask， 
+
+```
+The system creates a new task and instantiates the activity at the root of the new task.
+```
+
+但是实际上并不会，所以我们需要和描述中说的一样，除了设置launchmode 还需要设置 taskAffinty
+
 
 * singleInstance
+

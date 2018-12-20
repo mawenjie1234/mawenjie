@@ -7,7 +7,7 @@
 
 # Android 28 datebase 源码分析
 
-  从以下四个方向入手。
+  从增删改查四个方向入手。
 
 ## query
 
@@ -155,8 +155,17 @@ try {
 * 只有一个数据插入删除修改
  db.insert(), db.update, db.delete()；
 
+## 查询
+```
+String sql = "select * from table where ..."；
+mSqLiteDatabase.rawQuery(sql, String[] selectionArgs)；
+
+```
+
+
 # 数据库操作耗时
 
-查询 1000个 
+1. 查询 1000个数据，每个数据有 3列 耗时 ： 30~46(红米note3, 低端机) 
+2. 插入 1000个数据插入 每行数据有3列 耗时 ： 170(，主线程，红米note3 ， 低端机)
 
 
