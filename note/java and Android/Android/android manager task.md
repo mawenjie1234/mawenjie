@@ -32,3 +32,24 @@ The system creates a new task and instantiates the activity at the root of the n
 
 * singleInstance
 
+一个task只能有一个Activity， 并且系统中只有一个实例。
+
+  * 多个Activity back 表现
+  * 多个Activity 会后台表现。
+  * 多个Activity 会被干掉么
+  * 多个activity 并使用 taskAffinty 后的表现。
+
+
+# 综上产生的问题 
+
+1. taskAffinty 是什么，怎么使用。有什么效果。
+   * taskAffinty 的值如果不写的话，默认是包名，也可以写别的类似包名的值，必须包含点。
+   * singleTask 加上他才会让Activity 创建到不同的task 中，并且之后从当前Activity启动的Activity都从在创建的task中。
+
+
+2. 最好不要让新的Activity 到新的task 中，这样新的Activity 退到后台然后从icon进来的时候，是从默认task 中启动，
+
+   结果 ： A(task a)-> B(task b)-> bg -> icon -> A(task a) -> onBackPress -> home
+   
+   中间的b会在退到后台然后重新点击icon进入的时候，无法出现。
+   
