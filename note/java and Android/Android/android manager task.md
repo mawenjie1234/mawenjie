@@ -52,4 +52,10 @@ The system creates a new task and instantiates the activity at the root of the n
    结果 ： A(task a)-> B(task b)-> bg -> icon -> A(task a) -> onBackPress -> home
    
    中间的b会在退到后台然后重新点击icon进入的时候，无法出现。
+
+# 补充
+
+* singleTask 做启动页
+
+  如果application被干掉的话，如果什么都不做，下一次点击icon会进上次用户停留的Activity，并saveInstance 不为空。如果我们有些必须要做的操作是在启动也上做，这个时候恢复Activity会出错，我们就必须要每次都进入启动页，那么可以设置启动也是singleTask,。
    
