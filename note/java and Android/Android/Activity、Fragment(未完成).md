@@ -13,6 +13,12 @@ so an application may safely perform fragment transactions in onStop() and
 will be able to save persistent state later.
 ```
 
+Activity 跳转的时候Activity的生命周期怎么走。
+
+Activity a -> b
+
+a onPause() -> b onCreate -> b onStart - > b onResume() -> a -> onStot() -> a onDestroy()
+
 
 
 
