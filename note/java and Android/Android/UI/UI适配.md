@@ -106,15 +106,19 @@
 各个手机上的效果
 
 * 小米mix3， 超级长的手机1080 * 2340
- <img src="$resource/Screenshot_2019-09-29-14-26-03-066_com.example.myapplication.png" width = "300" height = "650" alt="图片名称" align=center />
+
+ <img src="resource/Screenshot_2019-09-29-14-26-03-066_com.example.myapplication.png" width = "300" height = "650" alt="图片名称" align=center />
 
 * 红米note3， 前几年普通5.5寸1920*1080手机
- <img src="$resource/Screenshot_2019-10-03-02-32-22-055_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
+
+ <img src="resource/Screenshot_2019-10-03-02-32-22-055_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
 
 * 小米5s，5寸 1920*1080
- <img src="$resource/Screenshot_2019-10-02-14-43-09-593_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
+
+ <img src="resource/Screenshot_2019-10-02-14-43-09-593_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
 * 4.3寸 800x480
-![image]($resource/image.png) 
+
+![image](resource/image.png) 
 
 ## 有些页面不想用怎么办
 
@@ -178,20 +182,11 @@ Bitmap bmpGrayscale = Bitmap.createBitmap(LandApplication.getInstance().getConte
                 width, height, Bitmap.Config.ARGB_8888);
 ```
 
-
-## 框架缺陷
-* activity 继承CancelAdapt后，如果setCustomFragment(true)，那么他里面的fragment没用用，仍然会自动缩放。这个会拉出一个分支自己实现。
-* 设计尺寸是int，不能是float值。自己拉分支修改
-* 圆角dp不准确，正在尝试解决为什么不准确。
-*  splash 页面上也是bitmap，所以大小有问题，正在尝试怎么解决。
-
-
-## FQA
-### 1. 是否会对pad适配有影响。
+## 是否会对pad适配有影响。
 
 对sw600 的值不会影响，如果sw600里面有值，仍然使用sw600的值。
 
-### 2. density 是全局的，如果受第三方修改怎么办
+## density 是全局的，如果受第三方修改怎么办
 
 重写Activity getResource
 
@@ -204,7 +199,16 @@ Bitmap bmpGrayscale = Bitmap.createBitmap(LandApplication.getInstance().getConte
     }
 ```
 
-### 其他问题
+## 框架缺陷
+* activity 继承CancelAdapt后，如果setCustomFragment(true)，那么他里面的fragment没用用，仍然会自动缩放。这个会拉出一个分支自己实现。
+* 设计尺寸是int，不能是float值。自己拉分支修改
+* 圆角dp不准确，正在尝试解决为什么不准确。
+*  splash 页面上也是bitmap，所以大小有问题，正在尝试怎么解决。
+
+
+
+
+## 其他问题
 
 [github上问题汇总](https://github.com/JessYanCoding/AndroidAutoSize/issues/13)
 
