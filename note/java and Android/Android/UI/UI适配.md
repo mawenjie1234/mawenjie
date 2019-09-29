@@ -105,13 +105,18 @@
 
 各个手机上的效果
 
+* 小米mix3， 超级长的手机1080 * 2340
+ <img src="$resource/Screenshot_2019-09-29-14-26-03-066_com.example.myapplication.png" width = "300" height = "650" alt="图片名称" align=center />
 
+* 红米note3， 前几年普通5.5寸1920*1080手机
+ <img src="$resource/Screenshot_2019-10-03-02-32-22-055_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
 
+* 小米5s，5寸 1920*1080
+ <img src="$resource/Screenshot_2019-10-02-14-43-09-593_com.example.myapplication.png" width = "300" height = "533.33" alt="图片名称" align=center />
+* 4.3寸 800x480
+![image]($resource/image.png) 
 
-
-
-
-## 不想用怎么办
+## 有些页面不想用怎么办
 
 老ui可以无论是activity还是Fragment，都可以可以继承CancelAdapt 这个接口
 ```
@@ -176,5 +181,7 @@ public class MainFragment extends Fragment implements CancelAdapt {
 对sw600 的值不会影响，如果sw600里面有值，仍然使用sw600的值。
 
 ### 2. density 是全局的，如果受第三方修改怎么办
+
+重写Activity 
 
 
