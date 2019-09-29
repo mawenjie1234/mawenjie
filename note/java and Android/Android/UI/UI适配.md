@@ -1,4 +1,4 @@
-# UI适配，density适配方式
+  # UI适配，density适配方式
 
 ## 集成
 
@@ -169,10 +169,21 @@ public class MainFragment extends Fragment implements CancelAdapt {
 }
 ```
 
+## pixel 图片变小，变模糊
+
+使用这个方式，bitmap会有问题，在glide 的 transform 里面设置bitmap DisplayMetrics
+
+```
+Bitmap bmpGrayscale = Bitmap.createBitmap(LandApplication.getInstance().getContext().getResources().getDisplayMetrics(),
+                width, height, Bitmap.Config.ARGB_8888);
+```
+
+
 ## 框架缺陷
 * activity 继承CancelAdapt后，如果setCustomFragment(true)，那么他里面的fragment没用用，仍然会自动缩放。这个会拉出一个分支自己实现。
 * 设计尺寸是int，不能是float值。自己拉分支修改
 * 圆角dp不准确，正在尝试解决为什么不准确。
+*  splash 页面上也是bitmap，所以大小有问题，正在尝试怎么解决。
 
 
 ## FQA
@@ -182,6 +193,20 @@ public class MainFragment extends Fragment implements CancelAdapt {
 
 ### 2. density 是全局的，如果受第三方修改怎么办
 
-重写Activity 
+重写Activity getResource
+
+```
+  @Override
+    public Resources getResources() {
+        AutoSizeCompat.autoConvertDensityOfGlobal((super.getResources());//如果没有自定义需求用这个方法
+        AutoSizeCompat.autoConvertDensity((super.getResources(), 667, false);//如果有自定义需求就用这个方法
+        return super.getResources();
+    }
+```
+
+### 其他问题
+
+[github上问题汇总](https://github.com/JessYanCoding/AndroidAutoSize/issues/13)
+
 
 
