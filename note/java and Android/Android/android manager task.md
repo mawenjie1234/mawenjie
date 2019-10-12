@@ -58,4 +58,8 @@ The system creates a new task and instantiates the activity at the root of the n
 * singleTask 做启动页
 
   如果application被干掉的话，如果什么都不做，下一次点击icon会进上次用户停留的Activity，并saveInstance 不为空。如果我们有些必须要做的操作是在启动也上做，这个时候恢复Activity会出错，我们就必须要每次都进入启动页，那么可以设置启动也是singleTask,。
+
+
+# 实验
+* task 1 ActivityA -> task 2 ActivityB -> task 1 ActivityC。 C点击back 后，回到ActivityA，再次back后回到ActivityB， 再次Back回到桌面。
    

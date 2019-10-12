@@ -2,7 +2,7 @@
 
 ## [android 介绍](https://developer.android.com/training/constraint-layout/)
 
-##[简书参考文档](https://www.jianshu.com/p/768b9e47a77b)
+## [简书参考文档](https://www.jianshu.com/p/768b9e47a77b)
 
 ##  1 [负间距](https://juejin.im/entry/5b73d1b96fb9a009ba3fed79)
 
