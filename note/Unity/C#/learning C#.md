@@ -81,6 +81,9 @@ class Rectangle : Shape, PaintCost{
 # abstract 和 virtual
 * 使用virtual后，子类要重写父类的同名函数，必须写override
 * abstract 是为了不让new 
+* 接口仍然使用interface
+
+
 
 
 
