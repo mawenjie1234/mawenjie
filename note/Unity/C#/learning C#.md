@@ -85,6 +85,31 @@ class Rectangle : Shape, PaintCost{
 
 
 
+# C# 特性 Attribute
+
+* [Conditional("DEBUG")]
+
+```
+  [Conditional("DEBUG")]
+public void Message(string msg) {
+  .....
+}
+```
+
+
+* Obsolete 标记不应该使用的程序实体
+
+```
+  [Obsolete("Don't use OldMethod, use NewMethod instead", true)]
+void OldMethod(){
+  ...
+}
+```
+
+* 自定义特性
+
+
+
 
 
 
