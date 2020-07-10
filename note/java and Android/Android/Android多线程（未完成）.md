@@ -1,5 +1,0 @@
-# Thread
-
-# AsyncTask
-
-# Rxjava
