@@ -15,7 +15,7 @@
 2. *这些数据已有的写出 类-方法*
 3. *没有的写出新增的 类-方法，实现逻辑写在下部分*
 
-### 开关：
+### 开关，资源：
 
 1. today_new_tag_switch 新老页面开关
 2. 运行时图片资源走之前的pictureItem
@@ -28,15 +28,15 @@
 
 1. 流程图
 
-   1. <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200417830.png" alt="image-20201223200417830" style="zoom:67%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200417830.png" alt="image-20201223200417830" style="zoom:100%;" />
 
 2. *页面更新逻辑*
 
-   1. <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200030762.png" alt="image-20201223200030762" style="zoom:70%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200030762.png" alt="image-20201223200030762" style="zoom:100%;" />
 
 3. 新页面UI实现
 
-   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223201443613.png" alt="三个页面节点排列" style="zoom:50%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223201443613.png" alt="三个页面节点排列" style="zoom:100%;" />
 
    ##### 新页面两层ScrollView 以及节点信息
 
@@ -47,15 +47,17 @@
 
    ##### 三个页面更新和top初始化
 
-   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223204930391.png" alt="image-20201223204930391" style="zoom:67%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223204930391.png" alt="image-20201223204930391" style="zoom:100%;" />
 
    * TodayPageScrollView 是第一层滑动列表，负责三个页面左右滑动
    * TodayTop 封装了banner和 tag，负责接收当前上下滑动列表位置更新
    * PageTodayNewCategory 是一个个页面，负责页面中显示pictureMeta
 
+   
+
    ##### 页面上下滑动，左右页面跟随滑动流程
 
-   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201224110741964.png" alt="image-20201224110741964" style="zoom:67%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201224110741964.png" alt="image-20201224110741964" style="zoom:100%;" />
 
    1. TodayPageScrollView 接收到move操作的时候，更新内部三个页面内存位置信息，并触发TodayPageSelected
    2. PageToday 收到选中后，触发TodayTop注册新页面上下滑动通知
@@ -63,7 +65,7 @@
 
 4. 新老页面适配新数据
 
-   1. <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200518121.png" alt="image-20201223200518121" style="zoom:60%;" />
+   <img src="todayPage%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.assets/image-20201223200518121.png" alt="image-20201223200518121" style="zoom:%;" />
 
 ### 测试用例
 
