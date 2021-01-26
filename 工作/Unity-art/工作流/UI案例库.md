@@ -91,6 +91,12 @@ MFLanguage.singleton.GetTextWithId(Text TextId, String defaultString)
 
 ### 布局规范
 
+#### tips
+
+* 需要响应点击事件的节点使用 Empty4Raycast, image 和text下的Raycast Target 不勾选
+
+  ![image-20210125210147549](UI%E6%A1%88%E4%BE%8B%E5%BA%93.assets/Recycast Target.png)
+
 #### 冗余节点案例
 
 #### 
