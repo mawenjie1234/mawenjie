@@ -99,7 +99,7 @@ MFLanguage.singleton.GetTextWithId(Text TextId, String defaultString)
 
 #### 加载方式
 
-	##### 使用拖拽加载
+##### 使用拖拽加载
 
 * 将Resource中的资源拖拽到 Prefab的Inspector中，在Prefab加载的时候，资源也会被加载到
 
@@ -139,7 +139,7 @@ MFLanguage.singleton.GetTextWithId(Text TextId, String defaultString)
 * 什么情况下不合适RecycleView
 
   * 只有几个节点的情况下，使用系统自带的ScrollVIew就可以。比如首页的tag
-  * 每个节点的交互和动画复杂，需要牵扯到其他滑动列表中的节点，可以自己写复用机制
+  * 每个节点的交互和动画复杂，需要牵扯到其他滑动列表中的节点
 
 ---
 
@@ -212,7 +212,7 @@ MFLanguage.singleton.GetTextWithId(Text TextId, String defaultString)
 
 Setting页面需求
 
-<center class="half"><img src="UI%E6%A1%88%E4%BE%8B%E5%BA%93.assets/Settings UI.png" alt="image-20210127143722355" style="zoom:30%;" />    <img src="UI%E6%A1%88%E4%BE%8B%E5%BA%93.assets/Settings UI2.png" alt="image-20210127143813206" style="zoom:30%;" /></center>
+<center class="half"><img src="UI%E6%A1%88%E4%BE%8B%E5%BA%93.assets/Settings UI.png" alt="image-20210127143722355" style="zoom:100%;" />    <img src="UI%E6%A1%88%E4%BE%8B%E5%BA%93.assets/Settings UI2.png" alt="image-20210127143813206" style="zoom:100%;" /></center>
 
 节点
 
