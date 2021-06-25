@@ -71,4 +71,8 @@
 
     
 
-		* 通过主动检测：线程在Runnable中，检查isisInterrupted
+	* 通过主动检测：线程在Runnable中，检查isisInterrupted
+
+## 10 创建多少线程合适
+
+## 11 为什么局部变量是安全的
